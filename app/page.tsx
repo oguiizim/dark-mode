@@ -6,14 +6,11 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   const { theme, setTheme } = useTheme();
 
-  const toggleTheme = () => {
-    setTheme(theme == "light" ? "dark" : "light");
-  };
   return (
     <div className="w-full min-h-screen flex items-center justify-center">
-      <Button onClick={toggleTheme}>
-        Toggle
-      </Button>
+      <Button onClick={() => setTheme("light")}>White</Button>
+      <Button onClick={() => setTheme("dark")}>Dark</Button>
+      <Button onClick={() => setTheme("red")}>Red</Button>
     </div>
   );
 }
